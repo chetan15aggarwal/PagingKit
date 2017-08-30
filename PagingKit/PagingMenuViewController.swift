@@ -190,7 +190,7 @@ public class PagingMenuViewController: UIViewController {
         super.viewWillTransition(to: size, with: coordinator)
         
         layoutHandler = { [weak self] in
-            self?.menuView.invalidateLayout()
+            self?.menuView.reloadData()
             self?.scroll(index: self?.focusView.selectedIndex ?? 0, percent: 0, animated: false)
             self?.layoutHandler = nil
         }
